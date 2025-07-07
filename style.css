@@ -1,88 +1,200 @@
 /* style.css */
 
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+  --primary-color: #1e88e5;
+  --bg-light: #f8f9fa;
+  --bg-dark: #121212;
+  --text-light: #212529;
+  --text-dark: #f1f1f1;
+  --accent: #1565c0;
+  --transition: 0.3s ease;
 }
 
 body {
-  background-color: #f8f9fa;
-  color: #212529;
-  line-height: 1.6;
-  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color var(--transition), color var(--transition);
+  scroll-behavior: smooth;
 }
 
-header {
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header.hero-section {
+  background: linear-gradient(to right, #1e88e5, #42a5f5);
+  color: white;
+  padding: 60px 20px;
   text-align: center;
-  margin-bottom: 40px;
+  position: relative;
 }
 
-header h1 {
+.hero-overlay {
+  max-width: 700px;
+  margin: auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid white;
+}
+
+h1 {
   font-size: 2.5rem;
-  color: #1e88e5;
+  margin-bottom: 10px;
 }
 
-header p {
+.subtitle, .location {
   font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 10px;
 }
 
 .btn {
   display: inline-block;
+  background-color: white;
+  color: var(--primary-color);
   padding: 10px 20px;
-  background-color: #1e88e5;
-  color: #fff;
+  border-radius: 25px;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .btn:hover {
-  background-color: #1565c0;
+  background-color: var(--accent);
+  color: white;
 }
 
-section {
-  margin-bottom: 40px;
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-section h2 {
+.section h2 {
   font-size: 2rem;
-  color: #343a40;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #1e88e5;
-  padding-bottom: 5px;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
+.media-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.media-img {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.media-text div {
+  flex: 2;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .project {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 footer {
   text-align: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  color: #444;
   margin-top: 40px;
-  font-size: 0.9rem;
-  color: #888;
+}
+
+footer.dark-mode {
+  background-color: #1f1f1f;
+  color: #ccc;
 }
 
 a {
-  color: #1e88e5;
+  color: var(--primary-color);
   text-decoration: none;
+  transition: color var(--transition);
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--accent);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Toggle Button */
+.toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 999;
+  transition: background-color var(--transition);
+}
+
+.toggle-theme:hover {
+  background: var(--accent);
 }
