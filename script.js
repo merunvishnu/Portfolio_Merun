@@ -1,13 +1,15 @@
 // script.js
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+// Apply saved theme on load
+window.addEventListener("DOMContentLoaded", () => {
+  const darkMode = localStorage.getItem("dark-mode");
+  if (darkMode === "enabled") {
+    document.body.classList.add("dark-mode");
+  }
 });
+
+// Toggle dark mode and save preference
+function toggleTheme() {
+  const isDark = document.body.classList.toggle("dark-mode");
+  localStorage.setItem("dark-mode", isDark ? "enabled" : "disabled");
+}
