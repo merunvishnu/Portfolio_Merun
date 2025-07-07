@@ -25,16 +25,52 @@ body.dark-mode {
   color: var(--text-dark);
 }
 
-/* Hero Section */
+/* Hero Wrapper */
 .hero {
-  text-align: center;
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
 }
 
+/* Responsive Layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Profile Photo Frame */
+.framed-photo {
+  padding: 8px;
+  border: 5px solid #1e88e5;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.framed-photo img {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Hero Text Content */
+.hero-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Name and Role */
 .hero-name {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   color: #1e88e5;
-  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .hero-role {
@@ -43,40 +79,17 @@ body.dark-mode {
   margin-bottom: 20px;
 }
 
-.framed-photo {
-  display: inline-block;
-  padding: 6px;
-  border: 5px solid black;
-  border-radius: 8px;
-  box-shadow: 0 0 0 4px white, 0 0 15px rgba(0, 0, 0, 0.4);
-  background-color: white;
-}
-
-.framed-photo img {
-  width: 120px;
-  height: auto;
-  border-radius: 6px;
-  filter: grayscale(80%);
-  transition: transform 0.3s ease;
-}
-
-.framed-photo img:hover {
-  transform: scale(1.03);
-}
-
-/* Widget Container */
+/* Info Cards (Widgets) */
 .hero-widgets {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
-  margin-top: 20px;
 }
 
 .widget {
-  background: #f1f1f1;
-  padding: 10px 16px;
-  border-radius: 12px;
+  background: #e3f2fd;
+  padding: 10px 14px;
+  border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   font-size: 0.95rem;
   transition: background-color 0.3s, transform 0.3s;
@@ -89,19 +102,32 @@ body.dark-mode {
 }
 
 .widget:hover {
-  background-color: #e3f2fd;
+  background-color: #bbdefb;
   transform: translateY(-3px);
 }
 
 /* Dark Mode Support */
+body.dark-mode .hero {
+  background-color: #121212;
+}
+
+body.dark-mode .hero-name {
+  color: #90caf9;
+}
+
+body.dark-mode .hero-role {
+  color: #ccc;
+}
+
 body.dark-mode .widget {
-  background-color: #1f1f1f;
+  background-color: #263238;
   color: #eee;
 }
 
 body.dark-mode .widget a {
   color: #90caf9;
 }
+
 
 
 
