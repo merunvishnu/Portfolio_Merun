@@ -6,67 +6,80 @@
   <title>Merun Kumar A - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="assets/profile.jpg.jpg" alt="Merun Kumar A" width="150" style="border-radius: 50%; margin-bottom: 10px;" />
-    <h1>Merun Kumar A.</h1>
-    <p>Machine Learning Engineer | Data Analyst | Web Developer</p>
-    <p>📍 Salem, Tamil Nadu, India | 🌐 English, Tamil, Japanese (N5)</p>
-    <a href="assets/resume_personel.pdf" class="btn" target="_blank">Download Resume</a>
+  <header class="hero-section">
+    <div class="hero-overlay">
+      <img src="assets/profile.jpg.jpg" alt="Merun Kumar A" class="profile-pic" />
+      <h1>Merun Kumar A.</h1>
+      <p class="subtitle">Machine Learning Engineer | Data Analyst | Web Developer</p>
+      <p class="location">📍 Salem, Tamil Nadu, India | 🌐 English, Tamil, Japanese (N5)</p>
+      <a href="assets/resume_personel.pdf" class="btn" target="_blank">Download Resume</a>
+    </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I’m a 20-year-old engineer from Salem, a culturally rich city in Tamil Nadu known for its textile heritage and strong agricultural roots. Coming from a family of farmers, I’ve grown up learning the value of persistence and respect.</p>
-    <p>I got into mechanical engineering via counselling, but over time, I found deep interest in tech — especially machine learning, data analytics, and web development. Today, I combine these skills to build practical, people-focused solutions.</p>
-    <p>I’m driven by my family's resilience and my dream of creating a simpler life surrounded by nature. I value respect above all and welcome any opportunity that allows me to learn and contribute meaningfully.</p>
+    <div class="media-text">
+      <img src="assets/about-bg.jpg" alt="About Me" class="media-img" />
+      <div>
+        <p>I’m a 20-year-old engineer from Salem, a culturally rich city in Tamil Nadu known for its textile heritage and strong agricultural roots.</p>
+        <p>I got into mechanical engineering via counselling, but over time, I found deep interest in tech — especially machine learning, data analytics, and web development. Today, I combine these skills to build practical, people-focused solutions.</p>
+        <p>I’m driven by my family's resilience and my dream of creating a simpler life surrounded by nature. I value respect above all and welcome any opportunity that allows me to learn and contribute meaningfully.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="section">
     <h2>Skills</h2>
-    <ul>
-      <li>Languages: Python, C++, JavaScript, HTML, CSS, Japanese (N5)</li>
-      <li>Libraries: Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn</li>
-      <li>Frameworks: Google sites, Streamlit</li>
-      <li>Tools: GitHub, Colab, VSCode, IoT sensors, MQTT</li>
+    <ul class="skills-grid">
+      <li><strong>Languages:</strong> Python, C++, JavaScript, HTML, CSS, Japanese (N5)</li>
+      <li><strong>Libraries:</strong> Pandas, NumPy, Seaborn, Matplotlib, Scikit-learn</li>
+      <li><strong>Frameworks:</strong> Google Sites, Streamlit</li>
+      <li><strong>Tools:</strong> GitHub, Colab, VSCode, IoT sensors, MQTT</li>
     </ul>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="project">
-      <a href="https://github.com/merunvishnu/IOT-weather-Prediction">IoT-Based Weather Prediction</a>
-      <p>Python, Pandas, Seaborn — Simulates weather monitoring with sensor data, visualizes trends, and triggers alerts.</p>
-    </div>
-    <div class="project">
-      <a href ="https://github.com/merunvishnu/PDF_ROG">PDF Query System (RAG)</a>
-      <p>Groq LLM, FAISS — Ask questions to PDFs using AI-based retrieval with embeddings.</p>
-    </div>
-    <div class="project">
-      <a href="https://github.com/merunvishnu/Compression_project">File Format Converter</a>
-      <p>Web App — Convert PDF, images, audio, and video files. Lightweight and privacy-friendly.</p>
-    </div>
-    <div class="project">
-      <h3>Plant Disease Detector</h3>
-      <p>OpenCV, CNN — Detects crop diseases from leaf images. Supports rural farmers.</p>
-    </div>
-    <div class="project">
-      <a href="https://github.com/merunvishnu/Mood_based_Music-Player">Mood-Based Music Player</a>
-      <p>Emotion Recognition — Uses webcam to detect facial emotions and play mood-based songs via Spotify API.</p>
+    <div class="project-grid">
+      <div class="project">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <a href="https://github.com/merunvishnu/IOT-weather-Prediction">IoT-Based Weather Prediction</a>
+        <p>Simulates weather monitoring using Python and Seaborn.</p>
+      </div>
+      <div class="project">
+        <a href="https://github.com/merunvishnu/PDF_ROG">PDF Query System (RAG)</a>
+        <p>Groq LLM, FAISS — Ask questions to PDFs using AI-based retrieval with embeddings.</p>
+      </div>
+      <div class="project">
+        <a href="https://github.com/merunvishnu/Compression_project">File Format Converter</a>
+        <p>Web App — Convert PDF, images, audio, and video files. Lightweight and privacy-friendly.</p>
+      </div>
+      <div class="project">
+        <h3>Plant Disease Detector</h3>
+        <p>OpenCV, CNN — Detects crop diseases from leaf images. Supports rural farmers.</p>
+      </div>
+      <div class="project">
+        <a href="https://github.com/merunvishnu/Mood_based_Music-Player">Mood-Based Music Player</a>
+        <p>Emotion Recognition — Uses webcam to detect facial emotions and play mood-based songs via Spotify API.</p>
+      </div>
     </div>
   </section>
 
-  <section id="experience">
+  <section id="experience" class="section">
     <h2>Experience</h2>
     <ul>
-      <li><strong>Studio Club</strong> <a href ="https://www.instagram.com/studiokct/">StudioKct</a> – Photographer and Media Coordinator</li>
-      <li><strong>Ignite Program</strong> – Led a brigade of 40 students, developed communication skills, and solved real problems and mentored them </li>
-      <li><strong>Aspire Leaders Program</strong> – Completed all modules including global communication and leadership development</li>
+      <li><strong>Studio Club:</strong> <a href="https://www.instagram.com/studiokct/">StudioKct</a> – Photographer and Media Coordinator</li>
+      <li><strong>Ignite Program:</strong> Led a brigade of 40 students, developed communication skills, and mentored them</li>
+      <li><strong>Aspire Leaders Program:</strong> Completed all modules including global communication and leadership development</li>
     </ul>
   </section>
 
-  <section id="education">
+  <section id="education" class="section">
     <h2>Education</h2>
     <p><strong>Sree Saravana Niketan Matric Hr. Sec. School</strong></p>
     <a href="https://sreesaravanaschool.in/">About my school</a>
@@ -74,30 +87,31 @@
       <li>10th Grade: 97.8%</li>
       <li>12th Grade: 92.3%</li>
     </ul>
-    <p><strong>Kumaraguru College of Technology</strong> (Ongoing)<br /> Bachelor's in Mechanical Engineering (Minors in IOT)<p>CGPA :8.4 </p></p>
+    <p><strong>Kumaraguru College of Technology</strong> (Ongoing)<br /> Bachelor's in Mechanical Engineering (Minors in IOT)<br />CGPA: 8.4</p>
+      <a href="https://kct.com/">About my college</a>
   </section>
 
-  <section id="achievements">
+  <section id="achievements" class="section">
     <h2>Achievements</h2>
-    <ul>
-      <li>🎓 Mohan T Advani scholar -- ₹37,500 Merit Scholarship (based on exam + interview)</li>
-      <li>🧠 160-Day DSA Challenge: 112 days completed (hash tables, trees, graphs, etc.)</li>
+    <ul class="achievement-list">
+      <li>🎓 Mohan T Advani scholar — ₹37,500 Merit Scholarship</li>
+      <li>🧠 160-Day DSA Challenge: 112 days completed</li>
       <li>🏆 BrandQuezt CSR Contest – Top Performer</li>
       <li>📊 Google Data Analytics Certificate</li>
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+    <div class="contact-grid">
+      <p>Email: merunkumar@email.com</p>
+      <p>GitHub: <a href="https://github.com/merunvishnu" target="_blank">github.com/merunvishnu</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/merunvishnu" target="_blank">linkedin.com/in/merunvishnu</a></p>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Merun Kumar A. All Rights Reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
